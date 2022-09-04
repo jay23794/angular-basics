@@ -1,0 +1,21 @@
+<h1 class="text-center" >Infinite scroll Example</h1>    
+<div    
+      infiniteScroll  
+      [infiniteScrollDistance]="scrollDistance"    
+      [infiniteScrollUpDistance]="scrollUpDistance"    
+      [infiniteScrollThrottle]="throttle"    
+      (scrolled)="onScrollDown()">    
+      <div class="container">    
+        <div class="row">    
+          <div *ngFor="let pic of allPhotos;let i=index" class="col-sm-4">    
+            <div  class="card mt-3">    
+              <img class="card-img-top" [src]="pic['src']['landscape']" alt="Card image cap">    
+              <div class="card-body">    
+                <h5 class="card-title">{{i+1}}</h5>    
+                <a href="#" class="btn btn-primary">Know more</a>    
+              </div>    
+            </div>    
+          </div>    
+        </div>    
+      </div>    
+</div>
